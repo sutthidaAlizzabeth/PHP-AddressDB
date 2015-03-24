@@ -30,9 +30,9 @@
         	<div id="login-border">
 	     <form action="<?php echo base_url('co_admin/login'); ?>" method="POST" role="login" id="login">
 	 			 	<div class="">
-	   					<input type="text" class="login-form-width form-control" placeholder="Username">
+	   					<input name="username" type="text" class="login-form-width form-control" placeholder="Username">
 	   					<br/>
-	   					<input type="text" class="form-control" placeholder="Password">
+	   					<input name="password" type="text" class="form-control" placeholder="Password">
               <br/><br/>
 	   					<button type="submit" class="btn btn-primary" style="width:100%;">Login</button>
 	 				</div>

@@ -1,6 +1,6 @@
 <?php 
 /**
-* 
+* for login and login
 */
 class co_admin extends CI_Controller
 {
@@ -9,6 +9,12 @@ class co_admin extends CI_Controller
 	{
 		$this->load->view('login');
 		
+	}
+
+	public function login(){
+		$username = $this->input->post('username');
+		$password = $this->input->post('password');
+
 	}
 }
 
