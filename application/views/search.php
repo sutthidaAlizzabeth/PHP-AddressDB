@@ -11,11 +11,8 @@
         <a class="navbar-brand" href="index.html">Address Book</a> 
       </div>
   		<div style="color: white;padding: 15px 50px 5px 50px;float: right;font-size: 16px;">
-  			<?php 
-  				echo "<strong>Today</strong> ".date("d : m : Y");
-  			?>
+  			<?php echo "<strong>Today</strong> ".date("d : m : Y"); ?>
   			&nbsp;
-  		  <a href="#" class="btn btn-danger square-btn-adjust">Logout</a>
   		</div>
     </nav>   
     <!-- /. NAV TOP  -->
@@ -29,11 +26,10 @@
             <a  href="insert.php"><i class="glyphicon glyphicon-plus fa-3x"></i> Insert</a>
           </li>
           <li>
-            <a  href="tab-panel.html"><i class="glyphicon glyphicon-off fa-3x"></i> Login</a>
+            <a  href="<?php echo base_url('co_admin/logout'); ?>"><i class="glyphicon glyphicon-off fa-3x"></i> Logout</a>
           </li>
         </ul>
       </div>
-
     </nav>  
     <!-- /. NAV SIDE  -->
     <div id="page-wrapper" style="background-color: #202020;">

@@ -11,7 +11,8 @@ class co_admin extends CI_Controller
 		
 	}
 
-	public function login(){
+	public function login()
+	{
 		$username = $this->input->post('username');
 		$password = $this->input->post('password');
 		$this->load->model('mo_admin');
@@ -25,6 +26,12 @@ class co_admin extends CI_Controller
 			redirect('co_admin/index');
 		}
 		
+	}
+
+	public function logout()
+	{
+		$this->session->sess_destroy();
+		redirect('co_admin/index');
 	}
 }
 
