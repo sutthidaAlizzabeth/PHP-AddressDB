@@ -39,39 +39,22 @@
         <form action="co_search.php" method="post">
           <table>
             <tr>
-              <td width="25%">
-                <h3 style="color:white;"> Search By Name </h3>
+              <td width="15%">
+                <h3 style="color:white;"> Search By </h3>
                 <input type="hidden" name="type" value="name">
               </td>
               <td>
-                <div class="col-lg-10">
-                  <div class="input-group">
-                    <input type="text" name="search" class="form-control" placeholder="Search by name">
-                    <span class="input-group-btn">
-                      <button class="btn btn-default" type="submit">Search!</button>
-                    </span>
-                  </div><!-- /input-group -->
-                </div><!-- /.col-lg-6 -->
-              </td>
-            </tr>
-          </table>
-        </form>
-      </div>
-        <!-- /Search By Name -->
-      <br/>
-        <!-- Search By Company -->
-      <div id="search_company">
-        <form action="co_search.php" method="post">
-          <table>
-            <tr>
-              <td width="25%">
-                <h3 style="color:white;"> Search By Company </h3>
-                <input type="hidden" name="type" value="company">
+                <div class="col-lg-4">
+                  <select class="form-control" style="height:35px; width:100px;">
+                    <option name="type" value="name">Name</option>
+                    <option name="type" value="name">Company</option>
+                  </select>
+                </div>
               </td>
               <td>
-                <div class="col-lg-10">
+                <div class="col-lg-8">
                   <div class="input-group">
-                    <input type="text" name="search" class="form-control" placeholder="Search by company">
+                    <input type="text" name="search" class="form-control" placeholder="Search by name">
                     <span class="input-group-btn">
                       <button class="btn btn-default" type="submit">Search!</button>
                     </span>
