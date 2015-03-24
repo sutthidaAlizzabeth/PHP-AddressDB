@@ -2,7 +2,7 @@
 <html>
 <head>
   <?php $this->load->view('layout/header') ?>
-	<title>Login</title>
+	<title>Search</title>
 </head>
 <body>
 	<div id="wrapper">

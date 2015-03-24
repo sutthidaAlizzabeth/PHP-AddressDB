@@ -9,10 +9,10 @@ class co_address extends CI_Controller
 	{
 		if ($this->session->userdata('fullname') == 'Administrator') {
 			$this->load->view('search');
+
 		} else {
-			redirect('admin/login');
+			redirect('co_admin');
 		}
-		
 		
 	}
 }
