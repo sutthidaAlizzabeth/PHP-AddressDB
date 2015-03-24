@@ -7,7 +7,13 @@ class co_address extends CI_Controller
 	
 	public function index()
 	{
-		$this->load->view('search');
+		if ($this->session->userdata('fullname') == 'Administrator') {
+			$this->load->view('search');
+		} else {
+			redirect('admin/login');
+		}
+		
+		
 	}
 }
 
