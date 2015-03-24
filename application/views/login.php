@@ -26,6 +26,9 @@
         </nav>  
         <!-- /. NAV SIDE  -->
         <div id="page-wrapper" style="background-color: #202020;">
+        <div>
+          <h1 style="color:red;"><?php echo $this->session->flashdata('mgs'); ?></h1>
+        </div>
         <!-- LOGIN -->
         	<div id="login-border">
 	     <form action="<?php echo base_url('co_admin/login'); ?>" method="POST" role="login" id="login">

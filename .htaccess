@@ -1,0 +1,4 @@
+RewriteEngine On
+RewriteBase /AddressDB/
+RewriteCond $1 !^(index\.php|css|img|libs|assets)
+RewriteRule ^(.*)$ index.php [L]
