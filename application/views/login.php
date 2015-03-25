@@ -30,7 +30,7 @@
           <div class="">
   	   			<input name="username" type="text" class="login-form-width form-control" placeholder="Username">
   	   			<br/>
-  	   			<input name="password" type="text" class="form-control" placeholder="Password">
+  	   			<input name="password" type="password" class="form-control" placeholder="Password">
             <br/><br/>
   	   			<button type="submit" class="btn btn-primary" style="width:100%;">Login</button>
   	 			</div>
