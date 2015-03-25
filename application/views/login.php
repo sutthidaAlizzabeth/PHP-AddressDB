@@ -22,7 +22,7 @@
     <!-- /. NAV SIDE  -->
     <div id="page-wrapper" style="background-color: #202020;">
       <div>
-        <h1 style="color:red;"><?php echo $this->session->flashdata('mgs'); ?></h1>
+        <h2 style="color:red;"><?php echo $this->session->flashdata('msg'); ?></h2>
       </div>
       <!-- LOGIN -->
       <div id="login-border">

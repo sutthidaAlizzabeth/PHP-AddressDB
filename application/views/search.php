@@ -20,10 +20,10 @@
    	  <div class="sidebar-collapse">
         <ul class="nav" id="main-menu">
           <li>
-            <a class="active-menu"  href="" ><i class="glyphicon glyphicon-search fa-3x"></i> Search</a>
+            <a class="active-menu"  href="#" ><i class="glyphicon glyphicon-search fa-3x"></i> Search</a>
           </li>
           <li>
-            <a  href="insert.php"><i class="glyphicon glyphicon-plus fa-3x"></i> Insert</a>
+            <a  href="<?php echo base_url('co_insert'); ?>"><i class="glyphicon glyphicon-plus fa-3x"></i> Insert</a>
           </li>
           <li>
             <a  href="<?php echo base_url('co_admin/logout'); ?>"><i class="glyphicon glyphicon-off fa-3x"></i> Logout</a>
@@ -36,7 +36,7 @@
       <!-- CONTENT -->
       <!-- Search By Name -->
       <div id="search_name">
-        <form action="co_search.php" method="post">
+        <form action="<?php echo base_url('co_address/search'); ?>" method="post">
           <table>
             <tr>
               <td width="15%">
@@ -47,14 +47,14 @@
                 <div class="col-lg-4">
                   <select class="form-control" style="height:35px; width:100px;">
                     <option name="type" value="name">Name</option>
-                    <option name="type" value="name">Company</option>
+                    <option name="type" value="company">Company</option>
                   </select>
                 </div>
               </td>
               <td>
                 <div class="col-lg-8">
                   <div class="input-group">
-                    <input type="text" name="search" class="form-control" placeholder="Search by name">
+                    <input type="text" name="key" class="form-control" placeholder="Enter key">
                     <span class="input-group-btn">
                       <button class="btn btn-default" type="submit">Search!</button>
                     </span>
@@ -65,6 +65,45 @@
           </table>
         </form>
       </div>
+      <br/>
+      <br/>
+      <?php  
+        if ($msg != FALSE)
+        {
+      ?>
+      <font style="color:red"><h2><?php echo $msg; ?></h2></font>
+      <?php 
+        }
+        if ($data != FALSE) 
+        {
+       ?>
+      <div class="show_data_border">
+        <table style="width: 100%;">
+          <font>
+            <tr style="show_data_row">
+              <th class="show_data_column row_header">First Name</th>
+              <th class="show_data_column row_header">Last Name</th>
+              <th class="show_data_column row_header">Company</th>
+              <th class="show_data_column row_header">Job</th>
+            </tr>
+            <?php 
+              foreach ($data as $row) {
+            ?>
+            <tr style="show_data_row">
+              <td class="show_data_column row_data"><?php echo $row->firstname; ?></td>
+              <td class="show_data_column row_data"><?php echo $row->lastname; ?></td>
+              <td class="show_data_column row_data"><?php echo $row->company; ?></td>
+              <td class="show_data_column row_data"><?php echo $row->job; ?></td>
+            </tr>
+            <?php
+              }
+             ?>
+          </font>
+        </table>
+      </div>
+      <?php 
+        }
+       ?>
 		  <!-- /. CONTENT --> 
 		</div>
       <!-- /. PAGE WRAPPER  -->
