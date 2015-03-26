@@ -92,7 +92,7 @@
               <td class="show_data_column row_data"><?php echo $row->company; ?></td>
               <td class="show_data_column row_data"><?php echo $row->job; ?></td>
               <td class="show_data_column row_data">
-                <a href="<?php echo base_url('co_address/getSingleData/'.$row->id); ?>">
+                <a href="<?php echo base_url('co_address/getSingleData/'.$row->id.'/'.$key); ?>">
                   <div class="glyphicon glyphicon-eye-open" style="margin-left:40%;"></div>
                 </a>
               </td>

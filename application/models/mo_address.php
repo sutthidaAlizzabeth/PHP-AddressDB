@@ -5,6 +5,14 @@
 */
 class mo_address extends CI_Model
 {	
+	public function searchById($id)
+	{
+		$condition = array('id'=>$id);
+		$query = $this->db->get_where('contacts', $condition);
+		$result = $query->result();
+		return $result;
+	}
+
 	public function searchByName($name)
 	{
 		$key = '%'.$name.'%';

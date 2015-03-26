@@ -53,14 +53,15 @@ class co_address extends CI_Controller
 		
 		
 	}
-/*
-	public function getSingleData($id)
+
+	public function getSingleData($id, $key)
 	{
 		$this->load->model('mo_address');
-		$result['data'] $this->mo_address->searchById($id);
-		$this->load->view('single_Data', $result);
+		$result['data'] = $this->mo_address->searchById($id);
+		$result['key'] = $key;
+		$this->load->view('view_data', $result);
 	}
-*/
+
 }
 
 
