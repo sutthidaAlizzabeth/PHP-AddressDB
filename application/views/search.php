@@ -36,6 +36,7 @@
       <!-- CONTENT -->
       <!-- Search By Name -->
       <div id="search_name">
+        <div><h5 style="color:red;">ใช้ "%" เพื่อดูทุกรายการ</h5></div>
         <form action="<?php echo base_url('co_address/search'); ?>" method="get">
           <table>
             <tr>
@@ -79,6 +80,8 @@
               <th class="show_data_column row_header">Last Name</th>
               <th class="show_data_column row_header">Company</th>
               <th class="show_data_column row_header">Job</th>
+              <th class="show_data_column row_header">View</th>
+              <th class="show_data_column row_header">Edit</th>
             </tr>
             <?php 
               foreach ($data as $row) {
@@ -88,6 +91,16 @@
               <td class="show_data_column row_data"><?php echo $row->lastname; ?></td>
               <td class="show_data_column row_data"><?php echo $row->company; ?></td>
               <td class="show_data_column row_data"><?php echo $row->job; ?></td>
+              <td class="show_data_column row_data">
+                <a href="<?php echo base_url('co_address/getSingleData/'.$row->id); ?>">
+                  <div class="glyphicon glyphicon-eye-open" style="margin-left:40%;"></div>
+                </a>
+              </td>
+              <td class="show_data_column row_data">
+                <a href="">
+                  <div class="glyphicon glyphicon-pencil" style="margin-left:40%;"></div>
+                </a>
+              </td>
             </tr>
             <?php
               }
