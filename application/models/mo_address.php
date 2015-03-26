@@ -9,7 +9,7 @@ class mo_address extends CI_Model
 	{
 		$condition = array('id'=>$id);
 		$query = $this->db->get_where('contacts', $condition);
-		$result = $query->result();
+		$result = $query->row();
 		return $result;
 	}
 

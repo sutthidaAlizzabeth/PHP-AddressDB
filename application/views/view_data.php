@@ -34,7 +34,26 @@
     <!-- /. NAV SIDE  -->
     <div id="page-wrapper" style="background-color: #202020;">
       <!-- CONTENT -->
-
+      <div class="show_data_border">
+        <table style="width: 100%;">
+          <tr style="show_data_row">
+            <th class="show_data_column row_header">First Name</th>
+            <td class="show_data_column row_data"><?php echo $row->firstname; ?></td>
+          </tr>
+          <tr>
+            <th class="show_data_column row_header">Last Name</th>
+            <td class="show_data_column row_data"><?php echo $row->lastname; ?></td>
+          </tr>
+          <tr>
+            <th class="show_data_column row_header">Company</th>
+            <td class="show_data_column row_data"><?php echo $row->company; ?></td>
+          </tr>
+          <tr>
+            <th class="show_data_column row_header">Job</th>
+            <td class="show_data_column row_data"><?php echo $row->job; ?></td>
+          </tr>
+        </table>
+      </div>
 		  <!-- /. CONTENT --> 
 		</div>
       <!-- /. PAGE WRAPPER  -->

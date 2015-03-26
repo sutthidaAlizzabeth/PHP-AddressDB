@@ -57,7 +57,7 @@ class co_address extends CI_Controller
 	public function getSingleData($id, $key)
 	{
 		$this->load->model('mo_address');
-		$result['data'] = $this->mo_address->searchById($id);
+		$result['row'] = $this->mo_address->searchById($id);
 		$result['key'] = $key;
 		$this->load->view('view_data', $result);
 	}

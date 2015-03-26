@@ -68,46 +68,47 @@
       </div>
       <br/>
       <br/>
+      <!-- ./Search By Name -->
+      <!-- SHOW RESULT OF SEARCHING -->
       <?php 
         if ($data != FALSE) 
         {
        ?>
       <div class="show_data_border">
         <table style="width: 100%;">
-          <font>
-            <tr style="show_data_row">
-              <th class="show_data_column row_header">First Name</th>
-              <th class="show_data_column row_header">Last Name</th>
-              <th class="show_data_column row_header">Company</th>
-              <th class="show_data_column row_header">Job</th>
-              <th class="show_data_column row_header">View</th>
-              <th class="show_data_column row_header">Edit</th>
-            </tr>
-            <?php 
-              foreach ($data as $row) {
-            ?>
-            <tr style="show_data_row">
-              <td class="show_data_column row_data"><?php echo $row->firstname; ?></td>
-              <td class="show_data_column row_data"><?php echo $row->lastname; ?></td>
-              <td class="show_data_column row_data"><?php echo $row->company; ?></td>
-              <td class="show_data_column row_data"><?php echo $row->job; ?></td>
-              <td class="show_data_column row_data">
-                <a href="<?php echo base_url('co_address/getSingleData/'.$row->id.'/'.$key); ?>">
-                  <div class="glyphicon glyphicon-eye-open" style="margin-left:40%;"></div>
-                </a>
-              </td>
-              <td class="show_data_column row_data">
-                <a href="">
-                  <div class="glyphicon glyphicon-pencil" style="margin-left:40%;"></div>
-                </a>
-              </td>
-            </tr>
-            <?php
-              }
-             ?>
-          </font>
+          <tr style="show_data_row">
+            <th class="show_data_column row_header">First Name</th>
+            <th class="show_data_column row_header">Last Name</th>
+            <th class="show_data_column row_header">Company</th>
+            <th class="show_data_column row_header">Job</th>
+            <th class="show_data_column row_header">View</th>
+            <th class="show_data_column row_header">Edit</th>
+          </tr>
+          <?php 
+            foreach ($data as $row) {
+          ?>
+          <tr style="show_data_row">
+            <td class="show_data_column row_data"><?php echo $row->firstname; ?></td>
+            <td class="show_data_column row_data"><?php echo $row->lastname; ?></td>
+            <td class="show_data_column row_data"><?php echo $row->company; ?></td>
+            <td class="show_data_column row_data"><?php echo $row->job; ?></td>
+            <td class="show_data_column row_data">
+              <a href="<?php echo base_url('co_address/getSingleData/'.$row->id.'/'.$key); ?>">
+                <div class="glyphicon glyphicon-eye-open" style="margin-left:40%;"></div>
+              </a>
+            </td>
+            <td class="show_data_column row_data">
+              <a href="">
+                <div class="glyphicon glyphicon-pencil" style="margin-left:40%;"></div>
+              </a>
+            </td>
+          </tr>
+          <?php
+            }
+           ?>
         </table>
       </div>
+      <!-- ./SHOW RESULT OF SEARCHING -->
       <?php 
         }
         else 
