@@ -8,11 +8,13 @@ class co_address extends CI_Controller
 	
 	public function index()
 	{
-		if ($this->session->userdata('is_admin') == 1) {
+		if ($this->session->userdata('is_admin') == 1) 
+		{
 			$result['data'] = FALSE;
 			$result['msg'] = FALSE;
 			$this->load->view('search', $result);
-		} else {
+		} else 
+		{
 			redirect('co_admin');
 		}
 		
@@ -20,28 +22,45 @@ class co_address extends CI_Controller
 
 	public function search()
 	{
-		$type = $this->input->post('type');
-		$key = $this->input->post('key');
-		$this->load->model('mo_address');
-		$result=FALSE;		
-		switch ($type) 
+		if ($this->session->userdata('is_admin') == 1) 
 		{
-			case 'name':
+			$type = $this->input->get('type');
+			$key = $this->input->get('key');
+			$this->load->model('mo_address');
+			$result=FALSE;
+			/*
+			*CHOSE FUNCTION OF SEARCH
+			*/
+			if ($type == 'name') 
+			{
 				$result['data'] = $this->mo_address->searchByName($key);
-				break;
-			
-			case 'company':
+			} elseif ($type == 'company') 
+			{
 				$result['data'] = $this->mo_address->searchByCompany($key);
-				break;
-		}
-		if ($result) {
-			$result['msg'] = FALSE;
-			$this->load->view('search', $result);
+			} elseif ($type == 'job')
+			{
+				$result['data'] = $this->mo_address->searchByJob($key);
+			} else
+			{
+				;
+			}
+			
+			/*
+			*CHECK RESULT OF SEARCH FUNCTION
+			*/
+			if ($result) {
+				$result['msg'] = FALSE;
+				$this->load->view('search', $result);
+			} else {
+				$result['msg'] = $key.' do not exist!!!';
+				$result['data'] = FALSE;
+				$this->load->view('search', $result);
+			}
 		} else {
-			$result['msg'] = $key.' do not exist!!!';
-			$result['data'] = FALSE;
-			$this->load->view('search', $result);
+			redirect('co_admin');
 		}
+		
+		
 		
 	}
 /*
