@@ -26,8 +26,8 @@ class mo_address extends CI_Model
 	public function searchByJob($job)
 	{
 		$key = '%'.$job.'%';
-		$condition = array('job'=>$key);
-		$query = $this->db->get_where('contacts', $condition);
+		$sql = "SELECT * FROM contacts WHERE job like'".$key."';";
+		$query = $this->db->query($sql);
 		$result = $query->result();
 		return $result;
 	}

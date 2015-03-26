@@ -42,7 +42,7 @@ class co_address extends CI_Controller
 				$result['data'] = $this->mo_address->searchByJob($key);
 			} else
 			{
-				;
+				
 			}
 			
 			/*
