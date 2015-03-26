@@ -67,13 +67,7 @@
       </div>
       <br/>
       <br/>
-      <?php  
-        if ($msg != FALSE)
-        {
-      ?>
-      <font style="color:red"><h2><?php echo $msg; ?></h2></font>
       <?php 
-        }
         if ($data != FALSE) 
         {
        ?>
@@ -103,7 +97,22 @@
       </div>
       <?php 
         }
+        else 
+        {
+          if ($key != NULL) {
+      ?>
+      <!--WARNING SEARCHING-->
+      <div class="alert alert-warning" role="alert">
+        <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+        <span class="sr-only">Error:</span>
+        <?php echo '"'.$key.'"'; ?> does not exitst!!!
+      </div>
+      <!-- ./WARNING SEARCHING-->
+      <?php
+          }
+        }
        ?>
+
 		  <!-- /. CONTENT --> 
 		</div>
       <!-- /. PAGE WRAPPER  -->

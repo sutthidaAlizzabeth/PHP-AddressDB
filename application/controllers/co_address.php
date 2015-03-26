@@ -11,7 +11,7 @@ class co_address extends CI_Controller
 		if ($this->session->userdata('is_admin') == 1) 
 		{
 			$result['data'] = FALSE;
-			$result['msg'] = FALSE;
+			$result['key'] = FALSE;
 			$this->load->view('search', $result);
 		} else 
 		{
@@ -37,26 +37,16 @@ class co_address extends CI_Controller
 			} elseif ($type == 'company') 
 			{
 				$result['data'] = $this->mo_address->searchByCompany($key);
-			} elseif ($type == 'job')
+			} 
+			else // $type == 'job'
 			{
 				$result['data'] = $this->mo_address->searchByJob($key);
-			} else
-			{
-				
 			}
-			
-			/*
-			*CHECK RESULT OF SEARCH FUNCTION
-			*/
-			if ($result) {
-				$result['msg'] = FALSE;
+
+				$result['key'] = $key;
 				$this->load->view('search', $result);
-			} else {
-				$result['msg'] = $key.' do not exist!!!';
-				$result['data'] = FALSE;
-				$this->load->view('search', $result);
-			}
-		} else {
+		} else 
+		{
 			redirect('co_admin');
 		}
 		

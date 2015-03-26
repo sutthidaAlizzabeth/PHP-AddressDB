@@ -21,9 +21,18 @@
     </nav>  
     <!-- /. NAV SIDE  -->
     <div id="page-wrapper" style="background-color: #202020;">
-      <div>
-        <h2 style="color:red;"><?php echo $this->session->flashdata('msg'); ?></h2>
+    <?php 
+    if($this->session->flashdata('msg') != null)
+    {
+     ?>
+      <div class="alert alert-danger" role="alert">
+        <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+        <span class="sr-only">Error:</span>
+        <?php echo $this->session->flashdata('msg'); ?>
       </div>
+    <?php 
+    }
+     ?>
       <!-- LOGIN -->
       <div id="login-border">
   	     <form action="<?php echo base_url('co_admin/login'); ?>" method="POST" role="login" id="login">
