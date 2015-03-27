@@ -114,7 +114,7 @@
         <table style="width: 100%;">
           <tr>
             <td colspan="2" style="float:right">
-              <a class="btn btn-primary btn-lg" href="<?php echo base_url('co_address/view_edit/'.$row->id); ?>" role="button">Edit</a>
+              <a class="btn btn-default" href="<?php echo base_url('co_address/view_edit/'.$row->id); ?>" role="button">Edit</a>
             </td>
           </tr>
         </table>
