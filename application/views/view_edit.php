@@ -2,22 +2,22 @@
 <html>
 <head>
   <?php $this->load->view('layout/header') ?>
-	<title>Insert</title>
+  <title>Insert</title>
 </head>
 <body>
-	<div id="wrapper">
+  <div id="wrapper">
     <nav class="navbar navbar-default navbar-cls-top " role="navigation" style="margin-bottom: 0">
       <div class="navbar-header">
         <a class="navbar-brand" href="index.html">Address Book</a> 
       </div>
-  		<div style="color: white;padding: 15px 50px 5px 50px;float: right;font-size: 16px;">
-  			<?php echo "<strong>Today</strong> ".date("d : m : Y"); ?>
-  			&nbsp;
-  		</div>
+      <div style="color: white;padding: 15px 50px 5px 50px;float: right;font-size: 16px;">
+        <?php echo "<strong>Today</strong> ".date("d : m : Y"); ?>
+        &nbsp;
+      </div>
     </nav>   
     <!-- /. NAV TOP  -->
     <nav class="navbar-default navbar-side" role="navigation">
-   	  <div class="sidebar-collapse">
+      <div class="sidebar-collapse">
         <ul class="nav" id="main-menu">
           <li>
             <a  href="<?php echo base_url('co_address'); ?>" ><i class="glyphicon glyphicon-search fa-3x"></i> Search</a>
@@ -46,7 +46,7 @@
             </div>
             <div>
               <td class="input_insert">
-                <input type="text" name="first_name" class="form-control" />
+                <input type="text" name="first_name" class="form-control" value="<?php echo $row->firstname; ?>" />
               </td>
             </div>
             <td class="asterisk">
@@ -62,7 +62,7 @@
             </div>
             <div>
               <td class="input_insert">
-                <input type="text" name="last_name" class="form-control" />
+                <input type="text" name="last_name" class="form-control" value="<?php echo $row->lastname; ?>" />
               </td>
             </div>
             <td class="asterisk">
@@ -78,7 +78,7 @@
             </div>
             <div>
               <td class="input_insert">
-                <input type="text" name="job" class="form-control" />
+                <input type="text" name="job" class="form-control" value="<?php echo $row->job; ?>" />
               </td>
             </div>
             <td class="asterisk">
@@ -94,7 +94,7 @@
             </div>
             <div>
               <td class="input_insert">
-                <textarea name="job_description" rows="4" cols="100"></textarea>
+                <textarea name="job_description" rows="4" cols="100" value="<?php echo $row->job_description; ?>"></textarea>
               </td>
             </div>
             <td class="asterisk">
@@ -110,7 +110,7 @@
             </div>
             <div>
               <td class="input_insert">
-                <input type="text" name="company" class="form-control" />
+                <input type="text" name="company" class="form-control" value="<?php echo $row->company; ?>" />
               </td>
             </div>
             <td class="asterisk">
@@ -126,7 +126,7 @@
             </div>
             <div>
               <td class="input_insert">
-                <input type="text" name="url_company" class="form-control" />
+                <input type="text" name="url_company" class="form-control" value="<?php echo $row->url_company; ?>" />
               </td>
             </div>
             <td class="asterisk">
@@ -142,7 +142,7 @@
             </div>
             <div>
               <td class="input_insert">
-                <textarea name="address" rows="4" cols="100"></textarea>
+                <textarea name="address" rows="4" cols="100" value="<?php echo $row->address; ?>"></textarea>
               </td>
             </div>
             <td class="asterisk">
@@ -158,7 +158,7 @@
             </div>
             <div>
               <td class="input_insert">
-                <input type="text" name="post_code" class="form-control" require />
+                <input type="text" name="post_code" class="form-control" value="<?php echo $row->postcode; ?>" require />
               </td>
             </div>
             <td class="asterisk">
@@ -174,7 +174,7 @@
             </div>
             <div>
               <td class="input_insert">
-                <input type="text" name="tel" class="form-control" />
+                <input type="text" name="tel" class="form-control" value="<?php echo $row->tel; ?>" />
               </td>
             </div>
             <td class="asterisk">
@@ -190,7 +190,7 @@
             </div>
             <div>
               <td class="input_insert">
-                <input type="text" name="mobile" class="form-control" />
+                <input type="text" name="mobile" class="form-control" value="<?php echo $row->mobile; ?>" />
               </td>
             </div>
             <td class="asterisk">
@@ -206,7 +206,7 @@
             </div>
             <div>
               <td class="input_insert">
-                <input type="text" name="fax" class="form-control" />
+                <input type="text" name="fax" class="form-control" value="<?php echo $row->fax; ?>" />
               </td>
             </div>
             <td class="asterisk">
@@ -222,7 +222,7 @@
             </div>
             <div>
               <td class="input_insert">
-                <input type="email" name="email" class="form-control" />
+                <input type="email" name="email" class="form-control" value="<?php echo $row->email; ?>" />
               </td>
             </div>
             <td class="asterisk">
@@ -238,7 +238,7 @@
             </div>
             <div>
               <td class="input_insert">
-                <input type="text" name="namecard" class="form-control" />
+                <input type="text" name="namecard" class="form-control" value="<?php echo $row->namecard; ?>" />
               </td>
             </div>
             <td class="asterisk">
@@ -254,7 +254,7 @@
             </div>
             <div>
               <td class="input_insert">
-                <input type="text" name="history" class="form-control" />
+                <input type="text" name="history" class="form-control" value="<?php echo $row->history; ?>" />
               </td>
             </div>
             <td class="asterisk">
@@ -289,8 +289,8 @@
           <input type="submit" class="btn btn-default" value="Add Information">
         </div>
       </form>
-		  <!-- /. CONTENT --> 
-		</div>
+      <!-- /. CONTENT --> 
+    </div>
       <!-- /. PAGE WRAPPER  -->
     </div>
   <!-- /. WRAPPER  -->

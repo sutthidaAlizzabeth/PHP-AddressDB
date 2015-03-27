@@ -20,10 +20,10 @@
    	  <div class="sidebar-collapse">
         <ul class="nav" id="main-menu">
           <li>
-            <a class="active-menu"  href="#" ><i class="glyphicon glyphicon-search fa-3x"></i> Search</a>
+            <a class="active-menu"  href="<?php echo base_url('co_address'); ?>" ><i class="glyphicon glyphicon-search fa-3x"></i> Search</a>
           </li>
           <li>
-            <a  href="<?php echo base_url('co_insert'); ?>"><i class="glyphicon glyphicon-plus fa-3x"></i> Insert</a>
+            <a  href="<?php echo base_url('co_address/view_insert'); ?>"><i class="glyphicon glyphicon-plus fa-3x"></i> Insert</a>
           </li>
           <li>
             <a  href="<?php echo base_url('co_admin/logout'); ?>"><i class="glyphicon glyphicon-off fa-3x"></i> Logout</a>
@@ -93,12 +93,12 @@
             <td class="show_data_column row_data"><?php echo $row->company; ?></td>
             <td class="show_data_column row_data"><?php echo $row->job; ?></td>
             <td class="show_data_column row_data">
-              <a href="<?php echo base_url('co_address/getSingleData/'.$row->id.'/'.$key); ?>">
+              <a href="<?php echo base_url('co_address/getSingleData/'.$row->id); ?>">
                 <div class="glyphicon glyphicon-eye-open" style="margin-left:40%;"></div>
               </a>
             </td>
             <td class="show_data_column row_data">
-              <a href="">
+              <a href="<?php echo base_url('co_address/view_edit/'.$row->id); ?>">
                 <div class="glyphicon glyphicon-pencil" style="margin-left:40%;"></div>
               </a>
             </td>
