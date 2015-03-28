@@ -20,19 +20,28 @@
    	  <div class="sidebar-collapse">
         <ul class="nav" id="main-menu">
           <li>
-            <a class="active-menu"  href="<?php echo base_url('co_address'); ?>" ><i class="glyphicon glyphicon-search fa-3x"></i> Search</a>
+            <a href="<?php echo base_url('co_address'); ?>" >
+              <i class="glyphicon glyphicon-search fa-3x"></i>
+               Search
+            </a>
           </li>
           <li>
-            <a  href="<?php echo base_url('co_address/view_insert'); ?>"><i class="glyphicon glyphicon-plus fa-3x"></i> Insert</a>
+            <a  href="<?php echo base_url('co_address/view_insert'); ?>">
+              <i class="glyphicon glyphicon-plus fa-3x"></i>
+               Insert
+            </a>
           </li>
           <li>
-            <a  href="<?php echo base_url('co_admin/logout'); ?>"><i class="glyphicon glyphicon-off fa-3x"></i> Logout</a>
+            <a  href="<?php echo base_url('co_admin/logout'); ?>">
+              <i class="glyphicon glyphicon-off fa-3x"></i>
+               Logout
+               </a>
           </li>
         </ul>
       </div>
     </nav>  
     <!-- /. NAV SIDE  -->
-    <div id="page-wrapper" style="background-color: #202020; margin-top:20px;">
+    <div id="page-wrapper" style="background-color: #202020; padding-top:20px;">
       <!-- CONTENT -->
       <table style="width: 100%;">
         <tr>

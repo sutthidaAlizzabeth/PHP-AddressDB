@@ -23,7 +23,7 @@
             <a  href="<?php echo base_url('co_address'); ?>" ><i class="glyphicon glyphicon-search fa-3x"></i> Search</a>
           </li>
           <li>
-            <a class="active-menu"  href="<?php echo base_url('co_address/view_insert'); ?>"><i class="glyphicon glyphicon-plus fa-3x"></i> Insert</a>
+            <a href="<?php echo base_url('co_address/view_insert'); ?>"><i class="glyphicon glyphicon-plus fa-3x"></i> Insert</a>
           </li>
           <li>
             <a  href="<?php echo base_url('co_admin/logout'); ?>"><i class="glyphicon glyphicon-off fa-3x"></i> Logout</a>

@@ -44,23 +44,26 @@
                 <h3 style="color:white;"> Search By </h3>
               </td>
               <td>
-                <div class="col-lg-4">
                   <select name="type" class="form-control" style="height:35px; width:100px;">
                     <option value="name">Name</option>
                     <option value="company">Company</option>
                     <option value="job">Job</option>
                   </select>
-                </div>
               </td>
               <td>
-                <div class="col-lg-8">
                   <div class="input-group">
                     <input type="text" name="key" class="form-control" placeholder="Enter key" autofocus required>
                     <span class="input-group-btn">
                       <button class="btn btn-default" type="submit">Search!</button>
                     </span>
                   </div><!-- /input-group -->
-                </div><!-- /.col-lg-6 -->
+              </td>
+              <td>
+                  <div class="input-group">
+                    <span class="input-group-btn">
+                      <button class="btn btn-default" type="submit">See All</button>
+                    </span>
+                  </div><!-- /input-group -->
               </td>
             </tr>
           </table>
