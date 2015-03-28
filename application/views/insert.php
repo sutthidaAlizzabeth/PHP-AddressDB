@@ -35,7 +35,7 @@
     <div id="page-wrapper" style="background-color: #202020;">
       <!-- CONTENT -->
       <div><h5 style="color:red;">* = จำเป็นต้องกรอก</h5></div>
-      <form action="<?php echo base_url('co_insert/insert'); ?>">
+      <form method="post" action="<?php echo base_url('co_insert/insert'); ?>">
         <table>
           <!--first name input-->
           <tr>
@@ -270,7 +270,7 @@
             </div>
             <div>
               <td class="input_insert">
-                <select name="level" class="form-control" style=" width:100px;">
+                <select name="level" class="form-control" style=" width:100px;" required>
                     <option value="5">5</option>
                     <option value="4">4</option>
                     <option value="3">3</option>
@@ -280,7 +280,7 @@
               </td>
             </div>
             <td class="asterisk">
-              <font color="red"></font>
+              <font color="red">*</font>
             </td>
           </tr>
         </table>

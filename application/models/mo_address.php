@@ -39,5 +39,18 @@ class mo_address extends CI_Model
 		$result = $query->result();
 		return $result;
 	}
+
+	public function searchAll()
+	{
+		$query = $this->db->get('contacts');
+		$result = $query->result();
+		return $result;
+	}
+
+	public function insert($first_name,$last_name,$job,$job_description,$company,$url_company,$address,$post_code,$tel,$mobile,$fax,$email,$namecard,$history,$level)
+	{
+		$new_data = array('firstname'=>$first_name, 'lastname'=>$last_name, 'company'=>$company, 'address'=>$address, 'postcode'=>$post_code, 'tel'=>$tel, 'mobile'=>$mobile, 'fax'=>$fax, 'email'=>$email, 'url_company'=>$url_company, 'namecard'=>$namecard, 'job'=>$job, 'job_description'=>$job_description, 'history'=>$history, 'level'=>$level);
+		$this->db->insert('contacts', $new_data);
+	}
 }
  ?>

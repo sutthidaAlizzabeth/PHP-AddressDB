@@ -271,11 +271,31 @@
             <div>
               <td class="input_insert">
                 <select name="level" class="form-control" style=" width:100px;">
-                    <option value="5">5</option>
-                    <option value="4">4</option>
-                    <option value="3">3</option>
-                    <option value="2">2</option>
-                    <option value="1">1</option>
+                    <option value="5" <?php if ($row->level == 5) {
+                      echo 'selected';
+                    } ?>>
+                      5
+                    </option>
+                    <option value="4" <?php if ($row->level == 4) {
+                      echo 'selected';
+                    } ?>>
+                      4
+                    </option>
+                    <option value="3" <?php if ($row->level == 3) {
+                      echo 'selected';
+                    } ?>>
+                      3
+                    </option>
+                    <option value="2" <?php if ($row->level == 2) {
+                      echo 'selected';
+                    } ?>>
+                      2
+                    </option>
+                    <option value="1" <?php if ($row->level == 1) {
+                      echo 'selected';
+                    } ?>>
+                      1
+                    </option>
                   </select>
               </td>
             </div>

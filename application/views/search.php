@@ -36,21 +36,20 @@
       <!-- CONTENT -->
       <!-- Search By Name -->
       <div id="search_name">
-        <div><h5 style="color:red;">ใช้ "%" เพื่อดูทุกรายการ</h5></div>
         <form action="<?php echo base_url('co_address/search'); ?>" method="get">
           <table>
             <tr>
-              <td width="15%">
+              <td width="20%">
                 <h3 style="color:white;"> Search By </h3>
               </td>
-              <td>
+              <td width="20%">
                   <select name="type" class="form-control" style="height:35px; width:100px;">
                     <option value="name">Name</option>
                     <option value="company">Company</option>
                     <option value="job">Job</option>
                   </select>
               </td>
-              <td>
+              <td width="50%">
                   <div class="input-group">
                     <input type="text" name="key" class="form-control" placeholder="Enter key" autofocus required>
                     <span class="input-group-btn">
@@ -59,11 +58,13 @@
                   </div><!-- /input-group -->
               </td>
               <td>
+                <a href="<?php echo base_url('co_address/searchAll'); ?>">
                   <div class="input-group">
                     <span class="input-group-btn">
                       <button class="btn btn-default" type="submit">See All</button>
                     </span>
-                  </div><!-- /input-group -->
+                  </div> 
+                </a>
               </td>
             </tr>
           </table>
