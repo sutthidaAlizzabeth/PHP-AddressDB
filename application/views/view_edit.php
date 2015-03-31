@@ -35,8 +35,23 @@
     <div id="page-wrapper" style="background-color: #202020;">
       <!-- CONTENT -->
       <div><h5 style="color:red;">* = จำเป็นต้องกรอก</h5></div>
-      <form action="<?php echo base_url('co_insert/insert'); ?>">
+      <form method="post" action="<?php echo base_url('co_address/edit'); ?>">
         <table>
+          <tr>
+            <div>
+              <td width="100px">
+                <h4 class="label_insert">ID</h4>
+              </td>
+            </div>
+            <div>
+              <td class="input_insert">
+                <input type="text" name="id" class="form-control" value="<?php echo $row->id; ?>" readonly/>
+              </td>
+            </div>
+            <td class="asterisk">
+              <font color="red"></font>
+            </td>
+          </tr>
           <!--first name input-->
           <tr>
             <div>
@@ -261,6 +276,22 @@
               <font color="red"></font>
             </td>
           </tr>
+          <!--remark input-->
+          <tr>
+            <div>
+              <td width="100px">
+                <h4 class="label_insert">Remark</h4>
+              </td>
+            </div>
+            <div>
+              <td class="input_insert">
+                <input type="text" name="remark" class="form-control" value="<?php echo $row->remark; ?>" />
+              </td>
+            </div>
+            <td class="asterisk">
+              <font color="red"></font>
+            </td>
+          </tr>
           <!--level input-->
           <tr>
             <div>
@@ -305,8 +336,8 @@
           </tr>
         </table>
         <br/><br/>
-        <div style="padding-left:80%">
-          <input type="submit" class="btn btn-default" value="Add Information">
+        <div style="padding-left:85%">
+          <input type="submit" class="btn btn-default" value="Update">
         </div>
       </form>
       <!-- /. CONTENT --> 

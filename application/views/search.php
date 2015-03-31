@@ -81,6 +81,7 @@
       <div class="show_data_border">
         <table style="width: 100%;">
           <tr style="show_data_row">
+            <th class="show_data_column row_header">Order</th>
             <th class="show_data_column row_header">First Name</th>
             <th class="show_data_column row_header">Last Name</th>
             <th class="show_data_column row_header">Company</th>
@@ -89,9 +90,12 @@
             <th class="show_data_column row_header">Edit</th>
           </tr>
           <?php 
+            $i = 0;
             foreach ($data as $row) {
+              $i = $i+1;
           ?>
           <tr style="show_data_row">
+            <td class="show_data_column row_data" style="text-align:center;"><?php echo $i ?></td>
             <td class="show_data_column row_data"><?php echo $row->firstname; ?></td>
             <td class="show_data_column row_data"><?php echo $row->lastname; ?></td>
             <td class="show_data_column row_data"><?php echo $row->company; ?></td>

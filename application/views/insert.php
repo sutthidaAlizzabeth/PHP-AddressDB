@@ -35,7 +35,7 @@
     <div id="page-wrapper" style="background-color: #202020;">
       <!-- CONTENT -->
       <div><h5 style="color:red;">* = จำเป็นต้องกรอก</h5></div>
-      <form method="post" action="<?php echo base_url('co_insert/insert'); ?>">
+      <form action="<?php echo base_url('co_address/insert'); ?>" method="post">
         <table>
           <!--first name input-->
           <tr>
@@ -255,6 +255,22 @@
             <div>
               <td class="input_insert">
                 <input type="text" name="history" class="form-control" />
+              </td>
+            </div>
+            <td class="asterisk">
+              <font color="red"></font>
+            </td>
+          </tr>
+          <!--remark input-->
+          <tr>
+            <div>
+              <td width="100px">
+                <h4 class="label_insert">Remark</h4>
+              </td>
+            </div>
+            <div>
+              <td class="input_insert">
+                <input type="text" name="remark" class="form-control" />
               </td>
             </div>
             <td class="asterisk">

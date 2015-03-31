@@ -117,6 +117,10 @@
             <th class="show_data_column row_header">History</th>
             <td class="show_data_column row_data"><?php echo $row->history; ?></td>
           </tr>
+          <tr>
+            <th class="show_data_column row_header">Remark</th>
+            <td class="show_data_column row_data"><?php echo $row->remark; ?></td>
+          </tr>
         </table>
       </div>
       <br/><br/>
