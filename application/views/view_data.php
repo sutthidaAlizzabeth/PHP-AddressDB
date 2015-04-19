@@ -63,6 +63,11 @@
           <!-- ./CHECK STAR LEVEL-->
         </tr>
       </table>
+      <br/>
+      <div style="margin-left:25%;">
+        <img style="width:400px; height:300px;" src="<?php echo base_url($row->namecard); ?>">
+      </div>
+      <br/>
       <div class="show_data_border">
         <table style="width: 100%;">
           <tr style="show_data_row">

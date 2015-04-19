@@ -161,6 +161,7 @@ class co_address extends CI_Controller
 
 			$this->load->model('mo_address');
 			$this->mo_address->insert($first_name,$last_name,$job,$job_description,$company,$url_company,$address,$post_code,$tel,$mobile,$fax,$email,$namecard,$history,$remark, $level);
+
 			redirect('co_address/searchAll');			
 		}
 		else 
@@ -168,6 +169,7 @@ class co_address extends CI_Controller
 			redirect('co_admin');
 		}
 	}
+
 
 }
 

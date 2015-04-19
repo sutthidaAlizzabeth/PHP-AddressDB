@@ -2,7 +2,7 @@
 <html>
 <head>
   <?php $this->load->view('layout/header') ?>
-  <title>Insert</title>
+  <title>Edit</title>
 </head>
 <body>
   <div id="wrapper">
@@ -34,6 +34,23 @@
     <!-- /. NAV SIDE  -->
     <div id="page-wrapper" style="background-color: #202020;">
       <!-- CONTENT -->
+      <!-- UPLOAD NAMECARD PICTURE -->
+      <div style="display:block; margin-buttom:20px;">
+        <img class="col-md-4" src="<?php echo base_url($row->namecard); ?>">
+        <div class="col-md-8" style="height:200px;">
+          <font color="white">Upload Name Card</font>
+          <br /><br />
+          <form action="" method="post">
+            <input type="file" name="namecard" size="20" />
+            <input type="hidden" name="id" value="<?php echo $row->id; ?>">
+            <br/>
+            <input type="submit" value="upload" />
+          </form>
+        </div>
+      </div>
+      <br/>
+      <!-- ./UPLOAD NAMECARD PICTURE -->
+        
       <div><h5 style="color:red;">* = จำเป็นต้องกรอก</h5></div>
       <form method="post" action="<?php echo base_url('co_address/edit'); ?>">
         <table>
