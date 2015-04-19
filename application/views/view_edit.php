@@ -35,20 +35,29 @@
     <div id="page-wrapper" style="background-color: #202020;">
       <!-- CONTENT -->
       <!-- UPLOAD NAMECARD PICTURE -->
-      <div style="display:block; margin-buttom:20px;">
-        <img class="col-md-4" src="<?php echo base_url($row->namecard); ?>">
-        <div class="col-md-8" style="height:200px;">
+      <div style="height:220px;" class="col-md-4">
+        <img style="max-width:200px" src="<?php echo base_url($row->namecard); ?>">
+      </div>
+        <div class="col-md-8" style="height:220px;">
           <font color="white">Upload Name Card</font>
           <br /><br />
-          <form action="" method="post">
+          <form action="<?php echo base_url('co_upload/upload'); ?>" accept-charset="utf-8" method="post" enctype="multipart/form-data">
             <input type="file" name="namecard" size="20" />
             <input type="hidden" name="id" value="<?php echo $row->id; ?>">
             <br/>
             <input type="submit" value="upload" />
           </form>
+          <?php 
+          if ($error != FALSE) {
+          ?>
+            <font color="red"><?php echo $error; ?></font>
+          <?php
+          }
+           ?>
         </div>
-      </div>
+      
       <br/>
+      <div style="height:20px;"></div>
       <!-- ./UPLOAD NAMECARD PICTURE -->
         
       <div><h5 style="color:red;">* = จำเป็นต้องกรอก</h5></div>

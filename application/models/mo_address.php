@@ -58,5 +58,10 @@ class mo_address extends CI_Model
 		$sql = 'UPDATE contacts SET firstname = "'.$first_name.'", lastname = "'.$last_name.'", company = "'.$company.'", address = "'.$address.'", postcode = "'.$post_code.'", tel = "'.$tel.'", mobile = "'.$mobile.'", fax = "'.$fax.'", email = "'.$email.'", url_company = "'.$url_company.'", namecard = "'.$namecard.'", job = "'.$job.'", job_description = "'.$job_description.'", history = "'.$history.'", remark = "'.$remark.'", level = "'.$level.'" WHERE id = "'.$id.'";';
 		$this->db->query($sql);
 	}
+
+	public function edit_namecard()
+	{
+		
+	}
 }
  ?>

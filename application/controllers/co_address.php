@@ -86,6 +86,7 @@ class co_address extends CI_Controller
 		{
 			$this->load->model('mo_address');
 			$result['row'] = $this->mo_address->searchById($id);
+			$result['error'] = FALSE;
 			$this->load->view('view_edit', $result);
 		}
 		else 
@@ -170,6 +171,7 @@ class co_address extends CI_Controller
 		}
 	}
 
+	
 
 }
 
