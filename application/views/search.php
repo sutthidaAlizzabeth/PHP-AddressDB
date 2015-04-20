@@ -8,7 +8,7 @@
 	<div id="wrapper">
     <nav class="navbar navbar-default navbar-cls-top " role="navigation" style="margin-bottom: 0">
       <div class="navbar-header">
-        <a class="navbar-brand" href="index.html">Address Book</a> 
+        <a class="navbar-brand" href="<?php echo base_url('co_address/index'); ?>">Address Book</a> 
       </div>
   		<div style="color: white;padding: 15px 50px 5px 50px;float: right;font-size: 16px;">
   			<?php echo "<strong>Today</strong> ".date("d : m : Y"); ?>
@@ -36,27 +36,28 @@
       <!-- CONTENT -->
       <!-- Search By Name -->
       <div id="search_name">
-        <form action="<?php echo base_url('co_address/search'); ?>" method="get">
           <table>
             <tr>
-              <td width="20%">
-                <h3 style="color:white;"> Search By </h3>
-              </td>
-              <td width="20%">
-                  <select name="type" class="form-control" style="height:35px; width:100px;">
-                    <option value="name">Name</option>
-                    <option value="company">Company</option>
-                    <option value="job">Job</option>
-                  </select>
-              </td>
-              <td width="50%">
-                  <div class="input-group">
-                    <input type="text" name="key" class="form-control" placeholder="Enter key" autofocus required>
-                    <span class="input-group-btn">
-                      <button class="btn btn-default" type="submit">Search!</button>
-                    </span>
-                  </div><!-- /input-group -->
-              </td>
+              <form action="<?php echo base_url('co_address/search'); ?>" method="get">
+                <td width="20%">
+                  <h3 style="color:white;"> Search By </h3>
+                </td>
+                <td width="20%">
+                    <select name="type" class="form-control" style="height:35px; width:100px;">
+                      <option value="name">Name</option>
+                      <option value="company">Company</option>
+                      <option value="job">Job</option>
+                    </select>
+                </td>
+                <td width="50%">
+                    <div class="input-group">
+                      <input type="text" name="key" class="form-control" value="<?php echo $key; ?>" placeholder="Enter key" required autofocus>
+                      <span class="input-group-btn">
+                        <button class="btn btn-default" type="submit">Search!</button>
+                      </span>
+                    </div><!-- /input-group -->
+                </td>
+                </form>
               <td>
                 <a href="<?php echo base_url('co_address/searchAll'); ?>">
                   <div class="input-group">
@@ -68,7 +69,6 @@
               </td>
             </tr>
           </table>
-        </form>
       </div>
       <br/>
       <br/>

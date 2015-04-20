@@ -19,7 +19,7 @@ class co_upload extends CI_Controller
 			$id = $this->input->post('id');
 
 			$config['upload_path'] = 'assets/namecards/';
-			$config['allowed_types'] = 'gif|jpg|png';
+			$config['allowed_types'] = 'jpg';
 			$config['max_size']	= '2048'; //kb
 			$config['max_width']  = '1024'; //pixel
 			$config['max_height']  = '1024'; //pixel
@@ -27,14 +27,14 @@ class co_upload extends CI_Controller
 			$config['file_name']  = $id;
 
 
-			$this->load->library('upload', $config);
+			$this->load->library('upload', $config); //เรียกใช้ library ชื่อ upload
 
-			if ($this->upload->do_upload('namecard'))
+			if ($this->upload->do_upload('namecard')) //upload ที่เรียกใช้คือ library
 			{
 				$data = $this->upload->data();
 
 				$this->load->model('mo_address');
-
+				$this->mo_address->edit_namecard($id);
 				$result['row'] = $this->mo_address->searchById($id);
 				$result['error'] = FALSE;
 	

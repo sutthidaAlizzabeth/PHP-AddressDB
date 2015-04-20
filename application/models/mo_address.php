@@ -53,14 +53,16 @@ class mo_address extends CI_Model
 		$this->db->insert('contacts', $new_data);
 	}
 
-	public function edit($id, $first_name,$last_name,$job,$job_description,$company,$url_company,$address,$post_code,$tel,$mobile,$fax,$email,$namecard,$history,$remark,$level)
+	public function edit($id, $first_name,$last_name,$job,$job_description,$company,$url_company,$address,$post_code,$tel,$mobile,$fax,$email,$history,$remark,$level)
 	{
-		$sql = 'UPDATE contacts SET firstname = "'.$first_name.'", lastname = "'.$last_name.'", company = "'.$company.'", address = "'.$address.'", postcode = "'.$post_code.'", tel = "'.$tel.'", mobile = "'.$mobile.'", fax = "'.$fax.'", email = "'.$email.'", url_company = "'.$url_company.'", namecard = "'.$namecard.'", job = "'.$job.'", job_description = "'.$job_description.'", history = "'.$history.'", remark = "'.$remark.'", level = "'.$level.'" WHERE id = "'.$id.'";';
+		$sql = 'UPDATE contacts SET firstname = "'.$first_name.'", lastname = "'.$last_name.'", company = "'.$company.'", address = "'.$address.'", postcode = "'.$post_code.'", tel = "'.$tel.'", mobile = "'.$mobile.'", fax = "'.$fax.'", email = "'.$email.'", url_company = "'.$url_company.'", job = "'.$job.'", job_description = "'.$job_description.'", history = "'.$history.'", remark = "'.$remark.'", level = "'.$level.'" WHERE id = "'.$id.'";';
 		$this->db->query($sql);
 	}
 
-	public function edit_namecard()
+	public function edit_namecard($id)
 	{
+		$sql = 'UPDATE contacts SET namecard = "assets/namecards/'.$id.'.jpg" WHERE id = "'.$id.'";';
+		$this->db->query($sql);
 		
 	}
 }

@@ -8,7 +8,7 @@
   <div id="wrapper">
     <nav class="navbar navbar-default navbar-cls-top " role="navigation" style="margin-bottom: 0">
       <div class="navbar-header">
-        <a class="navbar-brand" href="index.html">Address Book</a> 
+        <a class="navbar-brand" href="<?php echo base_url('co_address/index'); ?>">Address Book</a> 
       </div>
       <div style="color: white;padding: 15px 50px 5px 50px;float: right;font-size: 16px;">
         <?php echo "<strong>Today</strong> ".date("d : m : Y"); ?>
@@ -36,7 +36,7 @@
       <!-- CONTENT -->
       <!-- UPLOAD NAMECARD PICTURE -->
       <div style="height:220px;" class="col-md-4">
-        <img style="max-width:200px" src="<?php echo base_url($row->namecard); ?>">
+        <img style="width:300px; height:215px;" src="<?php echo base_url($row->namecard); ?>">
       </div>
         <div class="col-md-8" style="height:220px;">
           <font color="white">Upload Name Card</font>
@@ -264,22 +264,6 @@
             <div>
               <td class="input_insert">
                 <input type="email" name="email" class="form-control" value="<?php echo $row->email; ?>" />
-              </td>
-            </div>
-            <td class="asterisk">
-              <font color="red"></font>
-            </td>
-          </tr>
-          <!--name card input-->
-          <tr>
-            <div>
-              <td width="100px">
-                <h4 class="label_insert">Name Card</h4>
-              </td>
-            </div>
-            <div>
-              <td class="input_insert">
-                <input type="text" name="namecard" class="form-control" value="<?php echo $row->namecard; ?>" />
               </td>
             </div>
             <td class="asterisk">

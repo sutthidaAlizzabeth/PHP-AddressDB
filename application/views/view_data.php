@@ -8,7 +8,7 @@
 	<div id="wrapper">
     <nav class="navbar navbar-default navbar-cls-top " role="navigation" style="margin-bottom: 0">
       <div class="navbar-header">
-        <a class="navbar-brand" href="index.html">Address Book</a> 
+        <a class="navbar-brand" href="<?php echo base_url('co_address/index'); ?>">Address Book</a> 
       </div>
   		<div style="color: white;padding: 15px 50px 5px 50px;float: right;font-size: 16px;">
   			<?php echo "<strong>Today</strong> ".date("d : m : Y"); ?>
@@ -113,10 +113,6 @@
           <tr>
             <th class="show_data_column row_header">Email</th>
             <td class="show_data_column row_data"><?php echo $row->email; ?></td>
-          </tr>
-          <tr>
-            <th class="show_data_column row_header">Name Card</th>
-            <td class="show_data_column row_data"><?php echo $row->namecard; ?></td>
           </tr>
           <tr>
             <th class="show_data_column row_header">History</th>
