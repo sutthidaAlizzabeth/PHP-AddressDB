@@ -158,17 +158,16 @@ class co_address extends CI_Controller
 			$mobile = $this->input->post('mobile');
 			$fax = $this->input->post('fax');
 			$email = $this->input->post('email');
-			$namecard = $this->input->post('namecard');
 			$history = $this->input->post('history');
 			$remark = $this->input->post('remark');
 			$level = $this->input->post('level');
 
 			$this->load->model('mo_address');
-			$this->mo_address->insert($first_name,$last_name,$job,$job_description,$company,$url_company,$address,$post_code,$tel,$mobile,$fax,$email,$namecard,$history,$remark, $level);
-			$result['row'] = $this->mo_address->searchById($id);
-			$this->load->view('view_data', $result);
-			
-			redirect('co_address/searchAll');			
+			$this->mo_address->insert($first_name,$last_name,$job,$job_description,$company,$url_company,$address,$post_code,$tel,$mobile,$fax,$email,$history,$remark, $level);
+			//$result['row'] = $this->mo_address->getLateContact();
+			//$this->load->view('view_data', $result);
+			redirect('co_address');
+
 		}
 		else 
 		{
